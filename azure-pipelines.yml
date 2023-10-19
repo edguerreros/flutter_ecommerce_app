@@ -28,7 +28,7 @@ stages:
         displayName: 'Limpiando temporales'
       - script: sourceanalyzer -b flutterpackage -v
         displayName: 'Traduccion al modelo Fortify'
-      - script: sourceanalyzer -b flutterpackage -scan -f flutterpackage.fpr -v
+      - script: sourceanalyzer -b flutterpackage -scan -f flutterpackage.fpr -verbose
         displayName: 'Generacion del Archivo FPR'
       - script: fortifyclient -url http://10.0.1.1:8080/ssc -authtoken 66efaf80-e1a4-4bd5-8ca6-003e936ae2ed uploadFPR -file flutterpackage.fpr -applicationVersionID 10011
         displayName: 'Cargando archivo a Fortify SSC'
