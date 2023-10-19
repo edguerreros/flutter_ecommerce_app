@@ -22,8 +22,6 @@ stages:
   jobs:
     - job: 
       steps:
-      - script: mvn install
-        displayName: 'Pre requisitos de analisis SAST'
       - script: fortifyupdate -locale es
         displayName: 'Actualizando las reglas a la ultima version'
       - script: sourceanalyzer -b package -clean -v
