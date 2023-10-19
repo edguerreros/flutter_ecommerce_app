@@ -26,7 +26,7 @@ stages:
         displayName: 'Actualizando las reglas a la ultima version'
       - script: sourceanalyzer -b flutterpackage -clean -v
         displayName: 'Limpiando temporales'
-      - script: sourceanalyzer -b flutterpackage -v
+      - script: sourceanalyzer -b flutterpackage -show-files
         displayName: 'Traduccion al modelo Fortify'
       - script: sourceanalyzer -b flutterpackage -scan -f flutterpackage.fpr -verbose
         displayName: 'Generacion del Archivo FPR'
